@@ -1,0 +1,212 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Wrapper for the project list */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  gap: 20px; /* Space between projects */
+  justify-content: center; /* Center items horizontally */
+  margin: 0 auto; /* Center container horizontally */
+}
+
+/* Styling for each project */
+.project {
+  width: 45%; /* Adjust width to make it fit 2 items per row */
+  margin-bottom: 20px; /* Space below each project */
+  background-color: white; /* Background color for each project */
+  padding: 20px; /* Padding inside each project */
+  border-radius: 8px; /* Rounded corners for projects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+/* Hover effect for each project */
+.project:hover {
+  transform: scale(1.05); /* Slightly enlarge the project on hover */
+}
+
+/* Optional: Title styling inside each project */
+.project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Optional: Description styling inside each project */
+.project p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Media Query for screens up to 1400px */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+  }
+
+  #contact, #projects {
+    height: auto; /* Allow containers to grow based on content */
+  }
+}
+
+/* Media Query for screens up to 1200px */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none; /* Hide desktop navigation */
+  }
+
+  #hamburger-nav {
+    display: flex; /* Show hamburger menu for mobile */
+  }
+
+  #experience, .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile, .section-container {
+    display: block; /* Stack elements vertically */
+  }
+
+  .arrow {
+    display: none; /* Hide arrow for small screens */
+  }
+
+  section, .section-container {
+    height: auto; /* Allow sections to grow with content */
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+/* Media Query for screens up to 600px */
+@media screen and (max-width: 600px) {
+  #contact, footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem; /* Make text smaller for mobile */
+  }
+
+  footer nav {
+    height: auto; /* Adjust footer height */
+    margin-bottom: 2rem;
+  }
+
+  .about-containers, .contact-info-upper-container, .btn-container {
+    flex-wrap: wrap; /* Allow wrapping of elements */
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p, .nav-links li a {
+    font-size: 1rem; /* Reduce text size */
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw; /* Make images responsive */
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+}
+
+/* Projects Container: Responsive 2-column layout */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  width: 45%; /* Adjust width to fit two projects per row */
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Stacking Projects in Single Column for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .project {
+    width: 100%; /* Stack projects vertically on smaller screens */
+  }
+}
